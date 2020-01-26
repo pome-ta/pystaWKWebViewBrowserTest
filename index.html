@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Browser Test</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/eruda/1.4.3/eruda.min.js"></script>
+
+<link type="text/css" rel="stylesheet" href="./misc/reboot.css">
+<link type="text/css" rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div id="wrap">
+<div id="rsltUp">#</div>
+<div id="rsltDn">#</div>
+<textarea id="txt">
+let myCodeMirror = CodeMirror(document.body, {
+  value: txt,
+  theme: '_myColor',
+  lineNumbers: true,
+  lineWrapping: true,
+  mode: 'python',
+  /*specialChars: RegExp(' '),
+  //specialCharPlaceholder: () => {
+    //const node = document.getElementsByClassName('cm-invalidchar');
+    const node = document.createElement('i');
+    node.innerText = '·';
+    return node;
+  },*/
+
+  // --- addon
+  autoCloseBrackets: true,
+  matchBrackets: true,
+  styleActiveLine: true,
+  showInvisibles: true,
+  maxInvisibles: 16, // optional
+
+});
+</textarea>
+</div>
+</body>
+<script src="./script.js"></script>
+</html>
+
+
